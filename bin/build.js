@@ -16,14 +16,15 @@ ms.metadata({})
   .ignore('.*')
   .destination('runtastic-dataviz')
   .use(config())
-  .use(express())
-  .use(watch({
-    paths: {
-      '${source}/**/*': true,
-      '${source}/../src/components/**/*': true
-    },
-    livereload: true
-  }))
+//  uncomment for DEV
+//  .use(express())
+//  .use(watch({
+//    paths: {
+//      '${source}/**/*': true,
+//      '${source}/../src/components/**/*': true
+//    },
+//    livereload: true
+//  }))
   .use(runtastic())
   .use(webpack({
     devtool: 'eval-source-map',
